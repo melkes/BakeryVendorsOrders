@@ -22,18 +22,18 @@ namespace BakeryVendorsOrders.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
-    // [TestMethod]
-    // public void GetDescription_ReturnsDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      //Arrange
+      string name = "Museum Cafe";
 
-    //   //Act
-    //   Item newItem = new Item(description);
-    //   string result = newItem.Description;
+      //Act
+      Vendor newVendor = new Vendor(name);
+      string result = newVendor.Name;
 
-    //   //Assert
-    //   Assert.AreEqual(description, result);
-    // }
+      //Assert
+      Assert.AreEqual(name, result);
+    }
   }
 }

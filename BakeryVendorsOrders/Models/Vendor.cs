@@ -4,12 +4,12 @@ namespace BakeryVendorsOrders.Models
 {
   public class Vendor
   {
-    public string Description { get; set; }
+    public string Name { get; set; }
     private static List<Vendor> _instances = new List<Vendor> {};
 
-    public Vendor (string description)
+    public Vendor (string name)
     {
-      Description = description;
+      Name = name;
       _instances.Add(this);
     }
 

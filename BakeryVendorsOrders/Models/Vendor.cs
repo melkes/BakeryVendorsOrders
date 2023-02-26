@@ -4,23 +4,27 @@ namespace BakeryVendorsOrders.Models
 {
   public class Vendor
   {
-    public string Name { get; set; }
     private static List<Vendor> _instances = new List<Vendor> {};
+    public string Name { get; set; }
+    public int Id { get; }
+    // public List<Order> Orders { get; set; }
 
-    public Vendor (string name)
+    public Vendor(string name)
     {
       Name = name;
       _instances.Add(this);
-    }
-
-    public static List<Vendor> GetAll()
-    {
-      return _instances;
+      Id = _instances.Count;
+      // Order = new List<Order>{};
     }
 
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
     }
 
   }

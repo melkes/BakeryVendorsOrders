@@ -20,7 +20,7 @@ namespace BakeryVendorsOrders.Tests
     public void GetName_ReturnsName_String()
     {
       //Arrange
-      string name = "Museum Cafe";
+      string name = "36 doughnuts";
 
       //Act
       Vendor newVendor = new Vendor(name);

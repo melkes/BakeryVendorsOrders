@@ -6,19 +6,13 @@ using System;
 namespace BakeryVendorsOrders.Tests
 {
   [TestClass]
-  // public class VendorTests : IDisposable
-  // {
 
-  //   public void Dispose()
-  //   {
-  //     Vendor.ClearAll();
-  //   }
   public class VendorTests
   {
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test");
+      Vendor newVendor = new Vendor("test vendor", "test vendor description");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
@@ -50,5 +44,19 @@ namespace BakeryVendorsOrders.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void VendorDescription_HasDescription_String()
+    {
+      string vendorDescription = "The cafe in the museum";
+
+      Vendor newVendor = new Vendor(vendorDescription);
+      string result = newVendor.Description;
+
+      //Assert
+      Assert.AreEqual(vendorDescription, result);
+    }
+// Not sure how to add this yet. 
+// Added a second argument in new Vendor constructor in HomeController to deal with MSTest error, however it then seems to cause a ton of new errors
   }
 }

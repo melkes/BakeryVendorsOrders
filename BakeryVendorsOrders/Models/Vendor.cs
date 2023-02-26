@@ -9,14 +9,14 @@ namespace BakeryVendorsOrders.Models
     public string Description { get; set; }
     public List<Order> Orders { get; set; }
     public int Id { get; }
-    // public List<Order> Orders { get; set; }
 
-    public Vendor(string name)
+    public Vendor(string name, string description)
     {
       Name = name;
+      Description = description;
       _instances.Add(this);
       Id = _instances.Count;
-      // Order = new List<Order>{};
+      Orders = new List<Order>{};
     }
 
     public static List<Vendor> GetAll()

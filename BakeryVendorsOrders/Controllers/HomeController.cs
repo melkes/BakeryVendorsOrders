@@ -9,7 +9,7 @@ namespace BakeryVendorsOrders.Controllers
     [Route("/")]
     public ActionResult Index()
     {
-      Vendor myVendor = new Vendor("Add new Vendor name");
+      Vendor myVendor = new Vendor("Add new Vendor name", "Add a new Vendor description");
       return View(myVendor);
     }
 

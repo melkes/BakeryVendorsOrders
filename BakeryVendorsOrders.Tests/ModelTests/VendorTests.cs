@@ -20,10 +20,10 @@ namespace BakeryVendorsOrders.Tests
     public void GetName_ReturnsName_String()
     {
       //Arrange
-      string name = "Museum Cafe";
+      string name = "Test Vendor";
 
       //Act
-      Vendor newVendor = new Vendor("test vendor", "test vendor description");
+      Vendor newVendor = new Vendor("Test Vendor", "test vendor description");
       string result = newVendor.Name;
 
       //Assert
@@ -34,9 +34,9 @@ namespace BakeryVendorsOrders.Tests
     public void GetId_ReturnsVendorId_Int()
     {
       //Arrange
-      string name = "Museum Cafe";
+      string name = "Test Vendor";
       Vendor.ClearAll();
-      Vendor newVendor = new Vendor("test vendor", "test vendor description");
+      Vendor newVendor = new Vendor("Test Vendor", "test vendor description");
 
       //Act
       int result = newVendor.Id;
@@ -49,14 +49,14 @@ namespace BakeryVendorsOrders.Tests
     public void VendorDescription_HasDescription_String()
     {
       string vendorDescription = "The cafe in the museum";
+      string vendorName = "Museum Cafe";
 
-      Vendor newVendor = new Vendor(vendorDescription);
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
       string result = newVendor.Description;
 
       //Assert
       Assert.AreEqual(vendorDescription, result);
     }
-// Not sure how to add this yet. 
-// Added a second argument in new Vendor constructor in HomeController to deal with MSTest error, however it then seems to cause a ton of new errors
+
   }
 }

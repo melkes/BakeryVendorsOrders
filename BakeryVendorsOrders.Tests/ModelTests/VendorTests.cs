@@ -23,7 +23,7 @@ namespace BakeryVendorsOrders.Tests
       string name = "Museum Cafe";
 
       //Act
-      Vendor newVendor = new Vendor(name);
+      Vendor newVendor = new Vendor("test vendor", "test vendor description");
       string result = newVendor.Name;
 
       //Assert
@@ -36,7 +36,7 @@ namespace BakeryVendorsOrders.Tests
       //Arrange
       string name = "Museum Cafe";
       Vendor.ClearAll();
-      Vendor newVendor = new Vendor(name);
+      Vendor newVendor = new Vendor("test vendor", "test vendor description");
 
       //Act
       int result = newVendor.Id;

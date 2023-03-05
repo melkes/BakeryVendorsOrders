@@ -36,7 +36,7 @@ namespace BakeryVendorsOrders.Tests
       //Arrange
       string name = "Test Vendor";
       Vendor.ClearAll();
-      Vendor newVendor = new Vendor("Test Vendor", "test vendor description");
+      Vendor newVendor = new Vendor(name, "test vendor description");
 
       //Act
       int result = newVendor.Id;
@@ -57,6 +57,19 @@ namespace BakeryVendorsOrders.Tests
       //Assert
       Assert.AreEqual(vendorDescription, result);
     }
+
+    [TestMethod]
+        public void OrdersList_ReturnsListOfOrders_List()
+        {
+
+          Vendor newVendor = new Vendor("Test Vendor", "test vendor description");
+          Order testOrder = new Order("Bagel", "Freshly made bagel", 1.50, "2023-02-20");
+          newVendor.Orders.Add(testOrder);
+
+          List<Order> testList = newVendor.Orders;
+          Assert.AreEqual(new List<Order> { testOrder }, testList);
+        }
+
 
   }
 }

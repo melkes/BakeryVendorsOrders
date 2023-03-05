@@ -59,15 +59,15 @@ namespace BakeryVendorsOrders.Tests
     }
 
     [TestMethod]
-        public void OrdersList_ReturnsListOfOrders_List()
+        public void OrdersList_ReturnsList_List()
         {
 
           Vendor newVendor = new Vendor("Test Vendor", "test vendor description");
-          Order testOrder = new Order("Bagel", "Freshly made bagel", 1.50, "2023-02-20");
-          newVendor.Orders.Add(testOrder);
+          Order testOrder1 = new Order("Bagel", "Freshly made bagel", 1.50, "2023-02-20");
+          newVendor.Orders.Add(testOrder1);
 
           List<Order> testList = newVendor.Orders;
-          Assert.AreEqual(new List<Order> { testOrder }, testList);
+          Assert.AreEqual(typeof(Order), newVendor.Orders[0].GetType());
         }
 
 

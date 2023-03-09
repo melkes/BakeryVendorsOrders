@@ -11,17 +11,18 @@
   </head>
   <body>
     @using BakeryVendorsOrders.Models;
-    <div class="container">
-      <table>
+    <div class="container mt-4">
+      <table class="table" style="max-width:40%">
       <tr>
         <td>Vendor:</td>
-        <td>@Model["vendor"].Name</td>
+        <td><b>@Model["vendor"].Name</b></td>
       </tr>
       <tr>
         <td>Vendor Description</td>
         <td>@Model["vendor"].Description</td>
       </tr>
       </table>
+
       <h3>Here are all the orders from this vendor:</h3>
       <ol>
       @foreach (Order order in @Model["orders"])

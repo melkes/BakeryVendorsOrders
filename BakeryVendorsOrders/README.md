@@ -7,14 +7,14 @@
 ## Technologies Used
 
 * C#
-* .NET
+* ASP.NET Core MVC
 * MSTest
-* Git
 * Razor
 * HTML
+* Git
 
 ## Description
-
+This is an application that creates a website with ASP.Net. It is designed for a bakery to keep track of its vendors and those vendors' orders. The user can create new vendors, see a list of vendors, and see orders belonging to each vendor.
 
 ## Setup/Installation Requirements
 
@@ -34,28 +34,14 @@ No known bugs at this time.
 
 ## Roadmap
 ### Future development could include:
-
+* Ability to delete or update Vendors and Orders
+* Ability to update Vendor or Order detail
+* Ability to note whether an order has been paid for or not.
+* Search functionality
+* Add custom CSS and JavaScript
 
 ## License
 
 MIT License
 
 Copyright (c) _2023_ _Mike Wilkes_ 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

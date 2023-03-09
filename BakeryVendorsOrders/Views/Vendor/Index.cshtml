@@ -10,16 +10,13 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
+    <div class="container mt-3">
  @using BakeryVendorsOrders.Models;
-
     <h1>Vendors:</h1>
-
     @if (@Model.Count == 0)
     {
       <h3>No vendors have been added yet!</h3>
     } 
-
     @foreach (Vendor vendor in Model)
     {
       <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>

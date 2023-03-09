@@ -22,19 +22,14 @@
 
     @foreach (Vendor vendor in Model)
     {
-      <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
+      <ul>
+        <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
+      </ul>
     }
     </div>
     <div class="container">
-      <h1>Add a vendor</h1>
-      <p>Use this form to add a new vendor:</p>
-      <form action="/vendors" method="post">
-        <label for="vendorName">Vendor's name</label>
-        <input id="vendorName" name="vendorName" type="text">
-        <label for="vendorName">Vendor description</label>
-        <input id="vendorDescription" name="vendorDescription" type="text">
-        <button type="submit">Add</button>
-      </form>
+      <h3><a href='/vendors/new'>Add a new vendor</a></h3>
+      <br>
       <p><a href="/">Back home</a></p>
     </div>
   </body>

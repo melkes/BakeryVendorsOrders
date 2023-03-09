@@ -12,6 +12,17 @@
   <body>
     @using BakeryVendorsOrders.Models;
 
+    @* <h3>Vendor:</h3> *@
+    <table>
+  <tr>
+    <td>Vendor:</td>
+    <td>@Model["vendor"].Name</td>
+  </tr>
+  <tr>
+    <td>Vendor Description</td>
+    <td>@Model["vendor"].Description</td>
+  </tr>
+</table>
     <h3>Here are all the orders from this vendor:</h3>
     <ol>
     @foreach (Order order in @Model["orders"])
@@ -20,7 +31,7 @@
     }
     </ol>
 
-    <p><a href='/vendors/@Model["order"].Id/orders/new'>Add a new order</a></p>
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
     <p><a href='/vendors'>Return to vendors list</a></p>
     <p><a href='/'>Return to Main Page</a></p>
   </body>

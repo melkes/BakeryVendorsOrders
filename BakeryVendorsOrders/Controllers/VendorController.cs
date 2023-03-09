@@ -22,8 +22,8 @@ namespace BakeryVendorsOrders.Controllers
     [HttpPost("/vendors")]
     public ActionResult Create(string name, string description)
     {
-      Vendor myVendor = new Vendor("Add new Vendor name", "Add a new Vendor description");
-      return RedirectToAction("Index");
+      Vendor newVendor = new Vendor(name, description);
+      return RedirectToAction("Index", "Home");
     }
 
     [HttpGet("/vendors/{id}")]
@@ -49,7 +49,5 @@ namespace BakeryVendorsOrders.Controllers
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
-
   }
-
 }

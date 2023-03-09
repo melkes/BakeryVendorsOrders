@@ -10,10 +10,10 @@ namespace BakeryVendorsOrders.Models
     public List<Order> Orders { get; set; }
     public int Id { get; }
 
-    public Vendor(string name, string description)
+    public Vendor(string vendorName, string vendorDescription)
     {
-      Name = name;
-      Description = description;
+      Name = vendorName;
+      Description = vendorDescription;
       _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Order>{};

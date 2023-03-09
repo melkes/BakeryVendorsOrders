@@ -13,7 +13,7 @@
     <div class="container">
  @using BakeryVendorsOrders.Models;
 
-    <h1>Vendors</h1>
+    <h1>Vendors:</h1>
 
     @if (@Model.Count == 0)
     {
@@ -24,6 +24,17 @@
     {
       <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
     }
+    </div>
+    <div class="container">
+      <h1>Add a vendor</h1>
+      <p>Use this form to add a new vendor:</p>
+      <form action="/vendors" method="post">
+        <label for="vendorName">Vendor's name</label>
+        <input id="vendorName" name="vendorName" type="text">
+        <button type="submit">Add</button>
+      </form>
+      <p><a href="/">Back home</a></p>
+      <p><a href="/vendors">Back to list of vendors.</a></p>
     </div>
   </body>
 </html>

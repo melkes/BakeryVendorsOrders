@@ -12,23 +12,24 @@
   <body>
     @using BakeryVendorsOrders.Models;
     <div class="container mt-4">
-      <table class="table" style="max-width:40%">
-      <tr>
-        <td>Vendor:</td>
-        <td><b>@Model["vendor"].Name</b></td>
-      </tr>
-      <tr>
-        <td>Vendor Description</td>
-        <td>@Model["vendor"].Description</td>
-      </tr>
+
+      <table class="table" style="max-width:50%;font-size:22px;">
+        <tr>
+          <td>Vendor:</td>
+          <th>@Model["vendor"].Name</th>
+        </tr>
+        <tr>
+          <td>Vendor Description:</td>
+          <th>@Model["vendor"].Description</th>
+        </tr>
       </table>
 
-      <h3>Here are all the orders from this vendor:</h3>
+      <h5>Here are all the orders from this vendor:</h5>
       <ol>
-      @foreach (Order order in @Model["orders"])
-      {
+        @foreach (Order order in @Model["orders"])
+        {
         <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
-      }
+        }
       </ol>
       <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
       <p><a href='/vendors'>Return to vendors list</a></p>

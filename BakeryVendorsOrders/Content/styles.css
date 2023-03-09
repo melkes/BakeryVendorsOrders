@@ -1,0 +1,14 @@
+table {
+  max-width: 50%;
+  margin-left: 0; /* remove default margin */
+  margin-right: 0; /* remove default margin */
+}
+
+/* Optional: add padding to the table cells for spacing */
+td, th {
+  padding: 10px;
+}
+tbody tr td {
+  background-color: #76a5af
+  
+}

@@ -23,6 +23,7 @@ This is an application that creates a website with ASP.Net. It is designed for a
 * In a terminal window, run:
   * `dotnet restore`
   * `dotnet run`
+* In a web browser, navigate to https://localhost:5001/
 #### Run the unit tests
 * Install MSTest
 * Navigate to the Bakery.Tests directory
@@ -38,7 +39,7 @@ No known bugs at this time.
 * Ability to update Vendor or Order detail
 * Ability to note whether an order has been paid for or not.
 * Search functionality
-* Add custom CSS and JavaScript
+* Improve styling
 
 ## License
 
